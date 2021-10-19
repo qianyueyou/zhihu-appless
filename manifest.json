@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "[beta] Zhihu Appless",
+    "description": "Automatically redirect Zhihu links to Baidu's http://wjrsbu.smartapps.cn",
+    "version": "0.1",
+
+    "content_scripts": [
+        {
+            "matches": [ "https://www.zhihu.com/question/*" ],
+            "all_frames": true,
+            "js": [ "content.js" ],
+            "run_at": "document_start"
+        }
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "zhihu_appless@qianyue",
+            "strict_min_version": "50.0"
+        }
+    }
+}
